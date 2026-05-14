@@ -1,12 +1,12 @@
-1. Project Title and Description 
-Title: Retail Rewards Calculation Application
+# Project Title and Description 
+Retail Rewards Calculation Application
 Description: This project is a Spring Boot-based RESTful API designed to calculate reward points for retail customers.  Given a record of every transaction during a three-month period, calculate the reward points earned for each customer per month and total.  
 The rewards are calculated using the following logic:  
 A customer receives 2 points for every dollar spent over $100 in each transaction, plus 1 point for every dollar spent between $50 and $100 in each transaction. 
 (e.g. a $120 purchase = 2x$20 + 1x$50 = 90 points). 
 
 
-2. Prerequisites
+# Prerequisites
 Before running this application, ensure you have the following installed:
 Java Development Kit (JDK) 17 or higher.  
 Apache Maven 3.8+.  
@@ -14,23 +14,21 @@ An IDE (IntelliJ IDEA, Eclipse, or VS Code).
 A web browser or API client like Postman for testing endpoints. 
 
 
-3. Installation and Configuration
+# Installation and Configuration
 Follow these steps to set up the project locally:
 
-Clone the Repository: git clone <your-repository-url>
+Clone the Repository: git clone https://github.com/AG5404/RewardsCalculatorApplication.git
 
-cd 
+cd RewardsCalculatorApplication
 
 Configuration:
-
 The application uses an in-memory H2 Database by default, so no external database installation is required. 
 Configuration settings can be found in:src/main/resources/application.properties.  
+
 Initial Data: Pre-defined customer and transaction records are automatically loaded from src/main/resources/data.sql upon startup.  
 
-
-4. Running the application
+# Running the application
 You can run the application using Maven directly from your terminal:
-
 
 Build the project and install dependencies
 mvn clean install
@@ -40,7 +38,7 @@ mvn spring-boot:run
 
 Once started, the application will be available at http://localhost:8080.
 
-5. API Endpoints Documentation
+# API Endpoints Documentation
 
 The application exposes the following RESTful endpoints under the base path /api/v1. 
 All request and response bodies are in JSON format.
@@ -75,7 +73,7 @@ Response Codes:
 404 Not Found: The requested Customer ID does not exist.
 
 
-6. Testing Instructions
+# Testing Instructions
 The project includes unit and integration tests to ensure calculation accuracy and API reliability. 
 To run all tests:
 mvn test
